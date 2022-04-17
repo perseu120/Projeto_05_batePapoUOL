@@ -6,8 +6,15 @@
     box-sizing: border-box;
     /* background: rgb(44, 43, 43); */
 }
+
+/* fazendo a teg strong fica negrita novamente */
+strong{
+    font-weight: 700;
+}
 /* fazendo o estilo da barra que fica no topo */
 .topo{
+    position: fixed;
+    z-index: 1;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -20,10 +27,32 @@
 
 }
 
-/* estilo do conteudo da pagina, todos os itens disponivel para venda */
+/* estilo do container que vai ficar as mensagens recebidas e enviadas para a api */
 .container{
+    /* https://mock-api.driven.com.br/api/v6/uol/participants  */
+    padding-bottom: 90px;
+    display: flex;
+    flex-direction: column;
+}
+/* inicio dos estilos referente as mensagens */
+.mensagem{
+    display: flex;
+    float: left;
+    margin-left: 10px ;
     
 }
+.mensagem p{
+    display: flex;
+    align-items: center;
+    margin-right: 10px;
+    height: 40px;
+    float: left;
+    border-radius: 2px;
+
+}
+/* fim dos estilos referente as mensagens */
+
+
 /* estilo da barra que ficar em baixo */
 .rodaPe{
     position: fixed;
@@ -37,6 +66,7 @@
     justify-content: center;
     align-items: center;
 }
+
 /* campo do formulário enviar mensagem */
 .input-EnviarMensagem{
     display: flex;
@@ -47,6 +77,7 @@
     /* padding:5px 20px 5px 5px */
 }
 
+/* aqui é o estilo do lugar onse vai ser escrita as mensagens */
 .input-EnviarMensagem input{
     height: 100%;
     width: 80%;
@@ -55,6 +86,8 @@
     float:left;
     
 }
+
+/* o botão para clicar e enviar as mensagens */
 .input-EnviarMensagem button{
     display: flex;
     justify-content: center;
@@ -66,7 +99,7 @@
     float:left;
 }
 
-
+/*inicio logo da pagina e icones  */
 .logoUol{
     width: 75px;
     height: 53px;
@@ -76,4 +109,23 @@
 .topo ion-icon {
     color: black;
     font-size: 40px;
+}
+
+/* fim logo da pagina  e icones*/
+
+.time{
+    color: gray; /* cor para colocar no tempo que é exibido do lado nas mensagnes*/
+}
+
+
+/* estilos para colocar no fundo das mensagens a depender do tipo ti mensagens que ta sendo exibida ou enviada */
+.fundoCinza{
+    background-color: #DCDCDC;;
+}
+.fundoRosa{
+    background-color: #FFDEDE;
+}
+
+.fundoBranco{
+    background-color: #FFFFFF;
 }

@@ -27,16 +27,16 @@
             <ion-icon name="people-outline"></ion-icon>
         </header>
 
+<!-- e aqui no container que eu vou adicionar as mensagens vinda da api -->
+        <div class="container"> 
 
-        <div class="container">
-            
         </div>
 
         <!-- roda pe da pagina, ou a barra inferior -->
         <footer class="rodaPe">
-            <div class="input-EnviarMensagem">
+            <div class="input-EnviarMensagem" >
                 <input type="text" placeholder="Escreva aqui ..." >
-                <button class="enviar">
+                <button class="enviar" onclick="enviarMensagem(this)" type="submit" id="submit" >
                     <ion-icon class="enviar" name="paper-plane-outline"></ion-icon>    
                 </button>
                 
@@ -47,6 +47,7 @@
 
     <!-- arquivos de importação do java script -->
     <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script src="js/script.js"></script>
 
 </body>
